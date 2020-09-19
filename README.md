@@ -1,2 +1,2 @@
 # TMS-Alex-Stolyarov
-StolyarovAlexander Valer'evich
+Stolyarov Alexander Valer'evich
