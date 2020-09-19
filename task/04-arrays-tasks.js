@@ -9,7 +9,7 @@
  *                                                                                           *
  *********************************************************************************************/
 
- 
+//1 task
 /**
  * Returns an index of the specified element in array or -1 if element is not found
  * 
@@ -26,6 +26,7 @@ function findElement(arr, value) {
 	return arr.indexOf(value);
 }
 
+//2 task
 /**
  * Generates an array of odd numbers of the specified length
  * 
@@ -41,7 +42,7 @@ function generateOdds(len) {
 	return new Array(len).fill(0).map((item, index) => 1 + 2*index);
 }
 
-
+//3 task
 /**
  * Returns the doubled array - elements of the specified array are repeated twice using original order
  * 
@@ -57,7 +58,7 @@ function doubleArray(arr) {
 	return arr.concat(...arr);
 }
 
-
+//4 task
 /**
  * Returns an array of positive numbers from the specified array in original order
  * 
