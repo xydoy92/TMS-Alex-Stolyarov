@@ -8,7 +8,7 @@
  ********************************************************************************************/
 
 
-
+//0 task, already solved
 /**
  * Returns the result of concatenation of two strings.
  *
@@ -22,10 +22,10 @@
  *   '',  'bb'  => 'bb'
  */
 function concatenateStrings(value1, value2) {
-   return value1 + value2
+   return value1 + value2;
 }
 
-
+//1 task, the task solved on the classwork
 /**
  * Returns the length of given string.
  *
@@ -38,9 +38,10 @@ function concatenateStrings(value1, value2) {
  *   ''      => 0
  */
 function getStringLength(value) {
-    throw new Error('Not implemented');
+	return value.length;
 }
 
+//2 task
 /**
  * Returns the result of string template and given parameters firstName and lastName.
  * Please do not use concatenation, use template string :
@@ -55,9 +56,10 @@ function getStringLength(value) {
  *   'Chuck','Norris'  => 'Hello, Chuck Norris!'
  */
 function getStringFromTemplate(firstName, lastName) {
-    throw new Error('Not implemented');
+	return `Hello, ${firstName} ${lastName}!`;
 }
 
+//3 task
 /**
  * Extracts a name from template string 'Hello, First_Name Last_Name!'.
  *
@@ -69,10 +71,10 @@ function getStringFromTemplate(firstName, lastName) {
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
 function extractNameFromTemplate(value) {
-    throw new Error('Not implemented');
+	return value.slice(7, value.length - 1);
 }
 
-
+//4 task
 /**
  * Returns a first char of the given string.
  *
@@ -84,9 +86,10 @@ function extractNameFromTemplate(value) {
  *   'cat'       => 'c'
  */
 function getFirstChar(value) {
-    throw new Error('Not implemented');
+	return value.slice(0, 1);
 }
 
+//5 task (4 task solved on the homework)
 /**
  * Removes a leading and trailing whitespace characters from string.
  *
@@ -99,7 +102,7 @@ function getFirstChar(value) {
  *   '\tHello, World! ' => 'Hello, World!'
  */
 function removeLeadingAndTrailingWhitespaces(value) {
-    throw new Error('Not implemented');
+	return value.trim();
 }
 
 /**
