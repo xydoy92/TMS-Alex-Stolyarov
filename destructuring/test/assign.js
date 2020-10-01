@@ -10,7 +10,7 @@ describe('Assign object property values to new variables while destructuring', (
         assert.equal(y, 1);
       });
       it('assign a new name and give it a default value using `= <default value>`', () => {
-        const {x: y=2} = {y: 23};
+        const {x: y = 42} = {y: 23};
         assert.equal(y, 42);
       });
     });
