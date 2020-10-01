@@ -24,7 +24,7 @@ describe('Destructuring function parameters', () => {
     });
     describe('default values', () => {
       it('for simple values', () => {
-        const fn = (id, name='Bobby') => {
+        const fn = (id, name = 'Bob') => {
           assert.strictEqual(id, 23);
           assert.strictEqual(name, 'Bob');
         };
