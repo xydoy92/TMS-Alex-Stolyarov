@@ -22,7 +22,7 @@ describe('When destructuring you can also provide default values', () => {
       assert.strictEqual(b, 2);
     });
     it('also a string works with defaults', () => {
-      const [b=2] = '1';
+      const [a, b = 2] = '1';
       assert.equal(a, '1');
       assert.equal(b, 2);
     });
