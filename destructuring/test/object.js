@@ -6,7 +6,7 @@ var assert = require('assert');
 
 describe('Destructure objects', () => {
   it('by surrounding the left-hand variable with `{}`', () => {
-    const x = {x: 1};
+    const {x} = {x: 1};
     assert.equal(x, 1);
   });
   describe('nested', () => {
