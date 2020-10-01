@@ -10,7 +10,7 @@ describe('When destructuring you can also provide default values', () => {
       assert.equal(a, 1);
     });
     it('for a missing value', () => {
-      const [b=2] = [1,,3];
+      const [ , b = 2, ] = [1, , 3];
       assert.equal(b, 2);
     });
     it('in an object', () => {
