@@ -30,7 +30,7 @@ describe('Destructure objects', () => {
       assert.equal(z, void 0);
     });
     it('destructure from builtins (string)', () => {
-      const {substr} = 1;
+      const {substr} = "1";
       assert.equal(substr, String.prototype.substr);
     });
   });
