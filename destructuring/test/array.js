@@ -4,7 +4,7 @@ var assert = require('assert');
 
 describe('Destructuring arrays makes shorter code', () => {
     it('extract value from array, e.g. extract 0 into x like so `let [x] = [0];`', () => {
-      let firstValue = [1];
+      let [firstValue] = [1];
       assert.strictEqual(firstValue, 1);
     });
     it('get the last item from array', () => {
