@@ -8,7 +8,7 @@ describe('Destructuring arrays makes shorter code', () => {
       assert.strictEqual(firstValue, 1);
     });
     it('get the last item from array', () => {
-      let lastValue = [1, 2, 3];
+      let [ , , lastValue] = [1, 2, 3];
       assert.strictEqual(lastValue, 3);
     });
     it('swap two variables, in one operation', () => {
