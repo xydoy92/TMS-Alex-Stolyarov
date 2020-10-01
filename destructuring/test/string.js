@@ -14,7 +14,7 @@ describe('Destructuring also works on strings', () => {
     assert.equal(c, void 0);
   });
   it('unicode character work too', () => {
-    const [space, coffee] = 'a ☕';
+    const [ , space, coffee] = 'a ☕';
     assert.equal(coffee, '\u{2615}');
   });
 });
