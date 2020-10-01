@@ -16,7 +16,7 @@ describe('Destructure objects', () => {
       assert.equal(second, 42);
     });
     it('object and array', () => {
-      const {z:[x]} = {z: [23, 42]};
+      const {z:[ , x]} = {z: [23, 42]};
       assert.equal(x, 42);
     });
     it('array and object', () => {
