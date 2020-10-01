@@ -38,7 +38,7 @@ describe('Destructuring function parameters', () => {
         fn([]);
       });
       it('mix of parameter types', () => {
-        const fn = (id, [arr], {obj}) => {
+        const fn = (id = 1, [arr = 2], {obj = 3}) => {
           assert.equal(id, 1);
           assert.equal(arr, 2);
           assert.equal(obj, 3);
