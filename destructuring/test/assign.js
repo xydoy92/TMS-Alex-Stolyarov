@@ -22,7 +22,7 @@ describe('Assign object property values to new variables while destructuring', (
         fn({x: 1});
       });
       it('giving it a default value is possible too, like above', () => {
-        const fn = ({x: z=3}) => {
+        const fn = ({x: y = 3}) => {
           assert.equal(y, 3);
         };
         fn({});
