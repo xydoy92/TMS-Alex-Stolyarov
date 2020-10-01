@@ -14,7 +14,7 @@ describe('When destructuring you can also provide default values', () => {
       assert.equal(b, 2);
     });
     it('in an object', () => {
-      const [a, b=2] = {a: 1};
+      const {a, b = 2} = {a: 1};
       assert.equal(b, 2);
     });
     it('if the value is undefined', () => {
