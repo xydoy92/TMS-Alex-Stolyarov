@@ -12,7 +12,7 @@ describe('Destructure objects', () => {
   describe('nested', () => {
     it('multiple objects', () => {
       const magic = {first: 23, second: 42};
-      const {magic: [second]} = {magic};
+      const {magic: {second}} = {magic};
       assert.equal(second, 42);
     });
     it('object and array', () => {
