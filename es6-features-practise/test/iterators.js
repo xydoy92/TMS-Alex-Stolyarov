@@ -95,7 +95,7 @@ describe('A simple iterable without items inside, implementing the right protoco
   function iteratorFunction() {
 	  return {
 		  next() {
-			  
+			  return {done: true};
 		  }
 	  };
   }
