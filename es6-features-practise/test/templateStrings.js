@@ -54,7 +54,10 @@ line3`;
     assert.equal(normalString, 'line1\n\nline3');
   });
   it('even over more than two lines', function() {
-    var multiline = ``;
+	var multiline = `
+	
+	
+	`;
 	    
 	  
     assert.equal(multiline.split('\n').length, 4);
