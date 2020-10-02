@@ -48,8 +48,9 @@ describe('A template string, is wrapped in ` (backticks) instead of \' or "', fu
 
 describe('Template string, can contain multiline content', function() {
   it('wrap it in backticks (`) and add a newline, to span across two lines', function() {
-    var normalString = `line1 //// line3`;
+	var normalString = `line1
 
+line3`;
     assert.equal(normalString, 'line1\n\nline3');
   });
   it('even over more than two lines', function() {
