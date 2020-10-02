@@ -112,7 +112,7 @@ describe('A simple iterable without items inside, implementing the right protoco
     });
   });
 
-  let iterable;
+  let iterable = {};
   beforeEach(function() {
     iterable;
   });
