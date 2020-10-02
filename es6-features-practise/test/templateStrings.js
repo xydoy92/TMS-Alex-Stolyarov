@@ -103,7 +103,7 @@ describe('Tagged template strings, are an advanced form of template strings', fu
         assert.deepEqual(tagFunction`template string`, result);
       });
       it('expressions are NOT passed to it', function() {
-        var tagged = tagFunction`one${23}`;
+        var tagged = tagFunction`one${23}two`;
         assert.deepEqual(tagged, ['one', 'two']);
       });
     });
