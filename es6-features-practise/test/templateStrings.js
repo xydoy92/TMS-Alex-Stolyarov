@@ -28,7 +28,7 @@ describe('A template string, is wrapped in ` (backticks) instead of \' or "', fu
 
   describe('can evaluate any expression, wrapped inside "${...}"', function() {
     it('all inside "${...}" gets evaluated', function() {
-      var evaluated = `${ x } + ${ y }`;
+      var evaluated = `${x + y}`;
       assert.equal(evaluated, x+y);
     });
     it('inside "${...}" can also be a function call', function() {
