@@ -81,7 +81,7 @@ describe('`Symbol.for` for registering Symbols globally', function() {
 
 describe('`Symbol.keyFor()` gets the symbol key for a given symbol', function() {
   it('pass the symbol to `keyFor()` and you get its key', function() {
-    const key = Symbol.____(Symbol.for('foo'));
+    const key = Symbol.keyFor(Symbol.for('foo'));
     assert.equal(key, 'foo');
   });
   it('local symbols are not in the runtime-wide registry', function() {
