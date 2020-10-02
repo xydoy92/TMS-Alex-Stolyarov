@@ -51,7 +51,7 @@ describe('`Symbol.for` for registering Symbols globally', function() {
   });
   it('is different to `Symbol()` which creates a symbol every time and does not store it', function() {
     var globalSymbol = Symbol.for('new symbol');
-    var localSymbol = Symbol.for('new symbol');
+    var localSymbol = Symbol('new symbol');
     assert.notEqual(globalSymbol, localSymbol);
   });
   describe('`.toString()` on a Symbol', function() {
