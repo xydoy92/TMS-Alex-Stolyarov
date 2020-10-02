@@ -27,7 +27,7 @@ describe('The native array is a built-in iterable object', function() {
   describe('the iterator protocol', function() {
     it('calling `next()` on an iterator returns an object according to the iterator protocol', function() {
       const iterator = arr[Symbol.iterator]();
-      const firstItem = iterator.___();
+      const firstItem = iterator.next();
       assert.deepEqual(firstItem, {done: false, value: 'a'});
     });
     it('the after-last element has done=true', function() {
