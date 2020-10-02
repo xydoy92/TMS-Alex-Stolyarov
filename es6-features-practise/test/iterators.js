@@ -129,7 +129,7 @@ describe('A simple iterable without items inside, implementing the right protoco
   });
   describe('using the iterable', function() {
     it('it contains no values', function() {
-      let values;
+      let values = 0;
       for (let value of iterable) {
         values += value;
       }
