@@ -118,7 +118,7 @@ describe('Tagged template strings, are an advanced form of template strings', fu
         assert.equal(firstValueOnly`uno ${one}, dos ${two}`, 1);
       });
       it('the 3rd parameter contains the second expression`s value', function() {
-        function firstValueOnly(strings, firstValue, ____) {
+        function firstValueOnly(strings, firstValue, secondValue) {
           return secondValue;
         }
         assert.equal(firstValueOnly`uno ${one}, dos ${two}`, 2);
