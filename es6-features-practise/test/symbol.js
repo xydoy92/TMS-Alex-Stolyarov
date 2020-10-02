@@ -23,7 +23,7 @@ describe('Symbol', function() {
     assert.notEqual(sym1, sym2);
   });
   it('`typeof Symbol()` returns "symbol"', function(){
-    const theType = typeof Symbol;
+    const theType = typeof Symbol();
     assert.equal(theType, 'symbol');
   });
   it('`new Symbol()` throws an exception, to prevent creation of Symbol wrapper objects', function(){
