@@ -162,7 +162,7 @@ describe('Use the `raw` property of tagged template strings like so `s.raw`', fu
       assert.equal(String.raw`\\`, TWO_BACKSLASHES);
     });
     it('works on unicodes too', function() {
-      var smilie = '\u{1F600}';
+      var smilie = '\\u{1F600}';
       var actual = String.raw`\u{1F600}`;
       assert.equal(actual, smilie);
     });
