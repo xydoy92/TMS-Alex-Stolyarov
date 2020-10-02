@@ -141,7 +141,7 @@ describe('A simple iterable without items inside, implementing the right protoco
     });
     describe('can be converted to an array', function() {
       it('using `Array.from()`', function() {
-        const arr = iterable;
+        const arr = Array.from(iterable);
         assert.equal(Array.isArray(arr), true);
       });
       it('where `.length` is still 0', function() {
