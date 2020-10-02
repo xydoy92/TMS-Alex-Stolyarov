@@ -90,7 +90,7 @@ describe('Tagged template strings, are an advanced form of template strings', fu
     function tagFunction(s) {
       return s.toString();
     }
-    var evaluated = tagFunc `template string`;
+    var evaluated = tagFunction`template string`;
     assert.equal(evaluated, 'template string');
   });
   describe('the tag function can access each part of the template', function() {
