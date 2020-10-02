@@ -9,7 +9,7 @@ var assert = require('assert');
 
 describe('Symbol', function() {
   it('`Symbol` lives in the global scope', function(){
-    const expected = someNamespace.Symbol;
+    const expected = Symbol;
     assert.equal(Symbol, expected);
   });
   it('every `Symbol()` is unique', function(){
