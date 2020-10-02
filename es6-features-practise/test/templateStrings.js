@@ -147,7 +147,7 @@ describe('Use the `raw` property of tagged template strings like so `s.raw`', fu
   });
   it('`raw` can access the backslash of a line-break', function() {
     function firstCharEntered(strings) {
-      var lineBreak = strings.raw;
+      var lineBreak = strings.raw.toString()[0];
       return lineBreak;
     }
     assert.equal(firstCharEntered`\n`, '\\');
