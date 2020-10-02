@@ -86,7 +86,7 @@ describe('`Symbol.keyFor()` gets the symbol key for a given symbol', function() 
   });
   it('local symbols are not in the runtime-wide registry', function() {
     // Hint: `Symbol()` creates a local symbol!
-    const localSymbol = Symbol.for('foo');
+    const localSymbol = Symbol('foo');
     const key = Symbol.keyFor(localSymbol);
     assert.equal(key, void 0);
   });
