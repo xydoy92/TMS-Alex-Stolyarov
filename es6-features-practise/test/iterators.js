@@ -67,7 +67,7 @@ describe('The native string is a built-in iterable object', function() {
       iterator = s[Symbol.iterator]();
     });
     it('has a special string representation', function(){
-      const description = iterator.to____();
+      const description = iterator.toString();
       assert.equal(description, '[object String Iterator]');
     });
     it('`iterator.next()` returns an object according to the iterator protocol', function(){
