@@ -112,7 +112,9 @@ describe('A simple iterable without items inside, implementing the right protoco
     });
   });
 
-  let iterable = {};
+  let iterable = {
+	  [Symbol.iterator]: iteratorFunction,
+  };
   beforeEach(function() {
     iterable;
   });
