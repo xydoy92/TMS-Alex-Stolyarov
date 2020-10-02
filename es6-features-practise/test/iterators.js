@@ -145,7 +145,7 @@ describe('A simple iterable without items inside, implementing the right protoco
         assert.equal(Array.isArray(arr), true);
       });
       it('where `.length` is still 0', function() {
-        const arr = iterable;
+        const arr = Array.from(iterable);
         const length = arr.length;
         assert.equal(length, 0);
       });
