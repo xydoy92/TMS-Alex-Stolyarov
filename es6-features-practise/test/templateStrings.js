@@ -154,7 +154,7 @@ describe('Use the `raw` property of tagged template strings like so `s.raw`', fu
   });
   describe('`String.raw` as a static function', function(){
     it('concats the raw strings', function() {
-      var expected = '\n';
+      var expected = '\\n';
       assert.equal(String.raw`\n`, expected);
     });
     it('two raw-templates-string-backslashes equal two escaped backslashes', function() {
