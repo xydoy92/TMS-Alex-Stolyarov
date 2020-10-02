@@ -28,7 +28,7 @@ describe('Symbol', function() {
   });
   it('`new Symbol()` throws an exception, to prevent creation of Symbol wrapper objects', function(){
     function fn() {
-      Symbol();
+      new Symbol();
     }
     assert.throws(fn);
   });
