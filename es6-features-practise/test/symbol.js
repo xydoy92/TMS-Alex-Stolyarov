@@ -46,7 +46,7 @@ describe('`Symbol.for` for registering Symbols globally', function() {
   });
   it('stores the symbol in a runtime-wide registry and retrieves it from there', function() {
     const sym = Symbol.for('new symbol');
-    const sym1 = Symbol.for('new symbol1');
+    const sym1 = Symbol.for('new symbol');
     assert.equal(sym, sym1);
   });
   it('is different to `Symbol()` which creates a symbol every time and does not store it', function() {
