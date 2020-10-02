@@ -125,7 +125,7 @@ describe('Tagged template strings, are an advanced form of template strings', fu
       });
       it('using ES6 rest syntax, all values can be accessed via one variable', function() {
         function valuesOnly(stringsArray, ...allValues) { // using the new ES6 rest syntax
-          return;
+          return allValues;
         }
         assert.deepEqual(valuesOnly`uno=${one}, dos=${two}, tres=${three}`, [1, 2, 3]);
       });
