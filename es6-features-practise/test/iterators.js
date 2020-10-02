@@ -56,7 +56,7 @@ describe('The native string is a built-in iterable object', function() {
       assert.equal(isA, 'function');
     });
     it('use `Array.from()` to make an array out of any iterable', function(){
-      const arr = s;
+      const arr = Array.from(s);
       assert.deepEqual(arr, ['a', 'b', 'c']);
     });
   });
