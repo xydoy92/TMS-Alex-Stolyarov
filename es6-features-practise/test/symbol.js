@@ -41,7 +41,7 @@ describe('Symbol', function() {
 
 describe('`Symbol.for` for registering Symbols globally', function() {
   it('creates a new symbol (check via `typeof`)', function() {
-    const symbolType = Symbol.for('symbol name');
+    const symbolType = typeof Symbol.for('symbol name');
     assert.equal(symbolType, 'symbol');
   });
   it('stores the symbol in a runtime-wide registry and retrieves it from there', function() {
