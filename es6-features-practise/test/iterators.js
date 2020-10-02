@@ -13,7 +13,7 @@ describe('The native array is a built-in iterable object', function() {
     it('an array has an iterator, which is a function', function() {
       const iterator = arr[Symbol.iterator];
       const theType = typeof iterator;
-      const expected = 'iterator?';
+      const expected = 'function';
       assert.equal(theType, expected);
     });
     it('can be looped with `for-of`, which expects an iterable', function() {
