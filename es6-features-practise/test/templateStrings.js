@@ -21,7 +21,7 @@ describe('A template string, is wrapped in ` (backticks) instead of \' or "', fu
       assert.equal(evaluated, 'x=' + x);
     });
     it('multiple variables get evaluated too', function() {
-      var evaluated = '${ x } + $ { y }';
+      var evaluated = `${x}+${y}`;
       assert.equal(evaluated, x + '+' + y);
     });
   });
