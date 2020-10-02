@@ -141,7 +141,7 @@ describe('Tagged template strings, are an advanced form of template strings', fu
 describe('Use the `raw` property of tagged template strings like so `s.raw`', function() {
   it('the `raw` property accesses the string as it was entered', function() {
     function firstChar(strings) {
-      return strings;
+      return strings.raw;
     }
     assert.equal(firstChar`\n`, '\\n');
   });
