@@ -52,7 +52,7 @@ describe('The native string is a built-in iterable object', function() {
   
   describe('string is iterable', function() {
     it('the string`s object key `Symbol.iterator` is a function', function() {
-      const isA = typeof s.Symbol.iterator;
+      const isA = typeof s[Symbol.iterator];
       assert.equal(isA, 'function');
     });
     it('use `Array.from()` to make an array out of any iterable', function(){
