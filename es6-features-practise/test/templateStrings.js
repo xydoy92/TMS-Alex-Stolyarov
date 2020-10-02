@@ -99,7 +99,7 @@ describe('Tagged template strings, are an advanced form of template strings', fu
         return strings;
       }
       it('the strings are an array', function() {
-        var result = 'template string';
+        var result = ['template string'];
         assert.deepEqual(tagFunction`template string`, result);
       });
       it('expressions are NOT passed to it', function() {
