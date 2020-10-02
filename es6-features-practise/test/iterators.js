@@ -33,7 +33,7 @@ describe('The native array is a built-in iterable object', function() {
     it('the after-last element has done=true', function() {
       const arr = [];
       const iterator = arr[Symbol.iterator]();
-      const afterLast = iterator.next;
+      const afterLast = iterator.next();
       assert.deepEqual(afterLast, {done: true, value: void 0});
     });
   });
