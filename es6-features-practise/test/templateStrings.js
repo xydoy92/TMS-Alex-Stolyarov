@@ -112,7 +112,7 @@ describe('Tagged template strings, are an advanced form of template strings', fu
       var two = 2;
       var three = 3;
       it('the 2nd parameter contains the first expression`s value', function() {
-        function firstValueOnly(strings, first_value) {
+        function firstValueOnly(strings, firstValue) {
           return firstValue;
         }
         assert.equal(firstValueOnly`uno ${one}, dos ${two}`, 1);
