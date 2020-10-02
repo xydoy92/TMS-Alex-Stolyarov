@@ -71,7 +71,7 @@ describe('The native string is a built-in iterable object', function() {
       assert.equal(description, '[object String Iterator]');
     });
     it('`iterator.next()` returns an object according to the iterator protocol', function(){
-      const value = iterator.___();
+      const value = iterator.next();
       assert.deepEqual(value, {done: false, value: 'a'});
     });
     it('the after-last call to `iterator.next()` says done=true, no more elements', function(){
