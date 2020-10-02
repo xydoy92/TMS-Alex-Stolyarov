@@ -19,7 +19,7 @@ describe('The native array is a built-in iterable object', function() {
     it('can be looped with `for-of`, which expects an iterable', function() {
       let count = 0;
       for (let value of arr) {
-        count--;
+        count++;
       }
       assert.equal(count, arr.length);
     });
