@@ -56,7 +56,7 @@ describe('`Symbol.for` for registering Symbols globally', function() {
   });
   describe('`.toString()` on a Symbol', function() {
     it('also contains the key given to `Symbol.for()`', function() {
-      const description = Symbol('').toString();
+      const description = Symbol('new symbol').toString();
       assert.equal(description, 'Symbol(new symbol)');
     });
     describe('NOTE: the description of two different symbols', function() {
