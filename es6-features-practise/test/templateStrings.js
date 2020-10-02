@@ -158,7 +158,7 @@ describe('Use the `raw` property of tagged template strings like so `s.raw`', fu
       assert.equal(String.raw`\n`, expected);
     });
     it('two raw-templates-string-backslashes equal two escaped backslashes', function() {
-      const TWO_BACKSLASHES = '\\';
+      const TWO_BACKSLASHES = '\\\\';
       assert.equal(String.raw`\\`, TWO_BACKSLASHES);
     });
     it('works on unicodes too', function() {
