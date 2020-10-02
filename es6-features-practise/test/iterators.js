@@ -75,10 +75,9 @@ describe('The native string is a built-in iterable object', function() {
       assert.deepEqual(value, {done: false, value: 'a'});
     });
     it('the after-last call to `iterator.next()` says done=true, no more elements', function(){
-      iterator.next();
-      
-      
-      
+		iterator.next();
+		iterator.next();
+		iterator.next();
       assert.equal(iterator.next().done, true);
     });
   });
