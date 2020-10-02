@@ -7,7 +7,7 @@ var assert = require('assert');
 describe('A template string, is wrapped in ` (backticks) instead of \' or "', function() {
   describe('by default, behaves like a normal string', function() {
     it('just surrounded by backticks', function() {
-      var str = ``;
+      var str = `like a string`;
       assert.equal(str, 'like a string');
     });
   });
