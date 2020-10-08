@@ -13,13 +13,13 @@ describe('The native array is a built-in iterable object', function() {
     it('an array has an iterator, which is a function', function() {
       const iterator = arr[Symbol.iterator];
       const theType = typeof iterator;
-      const expected = 'iterator?';
+      const expected = 'function';
       assert.equal(theType, expected);
     });
     it('can be looped with `for-of`, which expects an iterable', function() {
       let count = 0;
       for (let value of arr) {
-        count--;
+        count++;
       }
       assert.equal(count, arr.length);
     });
@@ -27,13 +27,13 @@ describe('The native array is a built-in iterable object', function() {
   describe('the iterator protocol', function() {
     it('calling `next()` on an iterator returns an object according to the iterator protocol', function() {
       const iterator = arr[Symbol.iterator]();
-      const firstItem = iterator.___();
+      const firstItem = iterator.next();
       assert.deepEqual(firstItem, {done: false, value: 'a'});
     });
     it('the after-last element has done=true', function() {
       const arr = [];
       const iterator = arr[Symbol.iterator]();
-      const afterLast = iterator.next;
+      const afterLast = iterator.next();
       assert.deepEqual(afterLast, {done: true, value: void 0});
     });
   });
@@ -52,11 +52,11 @@ describe('The native string is a built-in iterable object', function() {
   
   describe('string is iterable', function() {
     it('the string`s object key `Symbol.iterator` is a function', function() {
-      const isA = typeof s.Symbol.iterator;
+      const isA = typeof s[Symbol.iterator];
       assert.equal(isA, 'function');
     });
     it('use `Array.from()` to make an array out of any iterable', function(){
-      const arr = s;
+      const arr = Array.from(s);
       assert.deepEqual(arr, ['a', 'b', 'c']);
     });
   });
@@ -67,18 +67,17 @@ describe('The native string is a built-in iterable object', function() {
       iterator = s[Symbol.iterator]();
     });
     it('has a special string representation', function(){
-      const description = iterator.to____();
+      const description = iterator.toString();
       assert.equal(description, '[object String Iterator]');
     });
     it('`iterator.next()` returns an object according to the iterator protocol', function(){
-      const value = iterator.___();
+      const value = iterator.next();
       assert.deepEqual(value, {done: false, value: 'a'});
     });
     it('the after-last call to `iterator.next()` says done=true, no more elements', function(){
-      iterator.next();
-      
-      
-      
+		iterator.next();
+		iterator.next();
+		iterator.next();
       assert.equal(iterator.next().done, true);
     });
   });
@@ -93,7 +92,13 @@ describe('The native string is a built-in iterable object', function() {
 
 describe('A simple iterable without items inside, implementing the right protocol', () => {
 
-  function iteratorFunction() {}
+  function iteratorFunction() {
+	  return {
+		  next() {
+			  return {done: true};
+		  }
+	  };
+  }
 
   describe('the `iteratorFunction` needs to comply to the iterator protocol', function() {
     it('must return an object', function() {
@@ -107,7 +112,9 @@ describe('A simple iterable without items inside, implementing the right protoco
     });
   });
 
-  let iterable;
+  let iterable = {
+	  [Symbol.iterator]: iteratorFunction,
+  };
   beforeEach(function() {
     iterable;
   });
@@ -122,23 +129,23 @@ describe('A simple iterable without items inside, implementing the right protoco
   });
   describe('using the iterable', function() {
     it('it contains no values', function() {
-      let values;
+      let values = 0;
       for (let value of iterable) {
         values += value;
       }
       assert.equal(values, '');
     });
     it('has no `.length` property', function() {
-      const hasLengthProperty = iterable;
+      const hasLengthProperty = iterable.hasOwnProperty("length");
       assert.equal(hasLengthProperty, false);
     });
     describe('can be converted to an array', function() {
       it('using `Array.from()`', function() {
-        const arr = iterable;
+        const arr = Array.from(iterable);
         assert.equal(Array.isArray(arr), true);
       });
       it('where `.length` is still 0', function() {
-        const arr = iterable;
+        const arr = Array.from(iterable);
         const length = arr.length;
         assert.equal(length, 0);
       });
