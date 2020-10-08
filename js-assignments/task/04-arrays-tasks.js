@@ -9,7 +9,7 @@
  *                                                                                           *
  *********************************************************************************************/
 
- 
+//1 task
 /**
  * Returns an index of the specified element in array or -1 if element is not found
  * 
@@ -23,9 +23,10 @@
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
 function findElement(arr, value) {
-   throw new Error('Not implemented');
+	return arr.indexOf(value);
 }
 
+//2 task
 /**
  * Generates an array of odd numbers of the specified length
  * 
@@ -38,10 +39,10 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-   throw new Error('Not implemented');
+	return Array.from({length: len}, (item, index) => 1 + 2*index);
 }
 
-
+//3 task
 /**
  * Returns the doubled array - elements of the specified array are repeated twice using original order
  * 
@@ -54,10 +55,10 @@ function generateOdds(len) {
  *    [] => [] 
  */
 function doubleArray(arr) {
-   throw new Error('Not implemented');
+	return [...arr, ...arr];
 }
 
-
+//4 task
 /**
  * Returns an array of positive numbers from the specified array in original order
  * 
@@ -70,7 +71,7 @@ function doubleArray(arr) {
  *    [] => [] 
  */
 function getArrayOfPositives(arr) {
-   throw new Error('Not implemented');
+	return arr.filter(item => item > 0);
 }
 
 /**

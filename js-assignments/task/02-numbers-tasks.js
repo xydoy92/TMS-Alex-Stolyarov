@@ -9,7 +9,7 @@
  *                                                                                          *
  ********************************************************************************************/
 
-
+//1 task
 /**
  * Returns an area of a rectangle given by width and heigth.
  *
@@ -22,10 +22,10 @@
  *   5, 5  => 25
  */
 function getRectangleArea(width, height) {
-    throw new Error('Not implemented');
+	return width*height;
 }
 
-
+//2 task
 /**
  * Returns a circumference of circle given by radius.
  *
@@ -38,9 +38,10 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCicleCircumference(radius) {
-    throw new Error('Not implemented');
+	return 2*Math.PI*radius;
 }
 
+//3 task
 /**
  * Returns an average of two given numbers.
  *
@@ -54,11 +55,12 @@ function getCicleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-    throw new Error('Not implemented');
+	return value1/2 + value2/2;
 }
 
+//4 task
 /**
- * Returns a distance beetween two points by cartesian coordinates.
+ * Returns a distance between two points by cartesian coordinates.
  *
  * @param {number} x1
  * @param {number} y1
@@ -73,7 +75,7 @@ function getAverage(value1, value2) {
  *   (-5,0) (10,-10) => 18.027756377319946
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
-    throw new Error('Not implemented');
+	return Math.hypot(x2 - x1, y2 - y1);
 }
 
 /**
